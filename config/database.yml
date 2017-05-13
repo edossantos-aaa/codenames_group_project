@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: codenames
+test:
+  adapter: postgresql
+  database: codenames_test
