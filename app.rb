@@ -8,6 +8,27 @@ get('/') do
   erb(:index)
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 post '/clear_all' do
   clear_all()
   erb :index

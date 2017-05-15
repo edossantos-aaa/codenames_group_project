@@ -6,6 +6,7 @@ gem("rake")
 gem("pg")
 gem("sinatra")
 gem("pry")
+gem('rest-client')
 
 group(:test) do
   gem("rspec")
