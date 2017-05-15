@@ -7,4 +7,13 @@ $(document).ready(function() {
   $(".assassin-Male").draggable();
   $(".doubleagent-red").draggable();
   $(".doubleagent-blue").draggable();
+  $("#secret-key-dialog").dialog({
+    autoOpen: false,
+    height: 500,
+    width: 500
+  });
+  $("#reveal-key").click(function(event) {
+    $("#secret-key-dialog").dialog("open");
+    event.preventDefault();
+  });
 });
