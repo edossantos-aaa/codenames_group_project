@@ -1,0 +1,99 @@
+.jumbotron {
+  background-color: #FFA500;
+  font-size: 48pt;
+  text-align: center;
+}
+
+.col-md-2 {
+  display: block;
+  border: solid #deb887 1px;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: beige;
+  text-align: center;
+  line-height: 150px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#hiddenbox{
+  background-color:white;
+}
+
+.redmale {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+}
+
+.redfemale {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 150px;
+}
+
+.bluemale {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 300px;
+}
+
+.bluefemale {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 450px;
+}
+
+.bystanderMale {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 650px;
+}
+
+.assassin {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 850px;
+}
+
+.doubleagent_red {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 950px;
+}
+.doubleagent_blue {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  border: solid black 1px;
+  position: absolute;
+  left: 1050px;
+}
