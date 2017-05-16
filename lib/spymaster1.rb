@@ -1,5 +1,5 @@
 class Spymaster1  < ActiveRecord::Base
-  belongs_to(:game)
+belongs_to(:games)
 
   @word1 = self
 

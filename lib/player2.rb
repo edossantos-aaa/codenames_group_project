@@ -1,3 +1,3 @@
 class Player2 < ActiveRecord::Base
-  belongs_to(:spymaster2)
+  belongs_to(:games)
 end

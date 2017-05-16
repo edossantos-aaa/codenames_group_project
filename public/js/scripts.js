@@ -52,4 +52,14 @@ $(document).ready(function() {
     }
     event.preventDefault();
   });
+  $("#hint-form").submit(function(event) {
+    hint = $("#hint").val();
+    httpRequest = new XMLHttpRequest();
+    httpRequest.open("POST", "/hint1", true);
+    httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    httpRequest.send("hint=" + hint);
+    $("#past-hints").append("<li>" + hint + "</li>");
+    alert(hint);
+    event.preventDefault()
+  });
 });

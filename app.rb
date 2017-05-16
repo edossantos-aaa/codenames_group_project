@@ -13,10 +13,14 @@ get('/') do
     @emptyarray.push(words[count])
     count+=1
   end
+  @hints = Hint1.all()
   erb(:index)
 end
 
-
+post('/hint1') do
+  hint = params.fetch("hint")
+  Hint1.create({:name => hint})
+end
 
 
 

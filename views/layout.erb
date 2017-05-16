@@ -23,7 +23,7 @@
   <body>
     <div>
   <ul id="nav-mobile" class="side-nav fixed">
-    <li class="logo"><a id="logo-container" href="/" class="brand-logo center" style="color:#000000" >Codenames</a></li>
+    <li class="logo"><a id="logo-container" href="/" class="brand-logo center" style="color:#711F4A" >Codenames</a></li>
      <li class="no-padding">
        <ul class="collapsible collapsible-accordion">
          <li class="bold"><a href="/" class="collapsible-header  waves-effect waves-blue">Home</a>
@@ -36,12 +36,24 @@
            </div>
          </li>
            <div class = "navsearch">
-             <li>Codenames stuff</li>
+             <div class="row">
+               <form class="form-group" id="hint-form">
+                 <label for="Spymaster">Spymaster type hint here</label>
+                 <input type="text" name="hint" id="hint">
+                 <button type="submit" name="button" id="submit-hint"></button>
+               </form>
+
+               <div class="well">
+                 <ul id="past-hints">
+                   <% @hints.each() do |hint| %>
+                     <li><%= hint.name %></li>
+                   <% end %>
+                 </ul>
+
+               </div>
            </div>
        </ul>
-       <br>
-       <br>
-       <br>
+
        <br>
        <br>
        <br>
@@ -58,9 +70,9 @@
   <div class="">
     <a href="#" class="brand-logo">Codenames</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Fill in later</a></li>
-      <li><a href="badges.html">Later</a></li>
-      <li><a href="collapsible.html">Code names near me</a></li>
+      <li><a href="https://github.com/mreichman">Max Github</a></li>
+      <li><a href="https://github.com/ziggity">Zach's Github</a></li>
+      <li><a href="https://github.com/pkarella">Peter's Github</a></li>
     </ul>
   </div>
 </nav>
