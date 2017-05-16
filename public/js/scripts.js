@@ -58,7 +58,7 @@ $(document).ready(function() {
     httpRequest.open("POST", "/hint1", true);
     httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     httpRequest.send("hint=" + hint);
-    $("#past-hints").prepend("<li>" + hint + "</li>");
+    $("#past-hints").prepend("<h6>" + 'Your hint is: ' + hint + '</h6>');
     alert(hint);
     event.preventDefault()
   });

@@ -112,6 +112,10 @@
 }
 
 #reveal-key {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: <left|right>;
+  padding-<left|right>: <width of image>px;
   position: relative;
   top: 200px;
   display: block;

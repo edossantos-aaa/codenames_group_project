@@ -23,15 +23,16 @@
   <body>
     <div>
   <ul id="nav-mobile" class="side-nav fixed">
-    <li class="logo"><a id="logo-container" href="/" class="brand-logo center" style="color:#711F4A" >Codenames</a></li>
+    <img border="0" src="http://girlgotfaith.com/wp-content/uploads/2016/06/zspycartoon.jpg" width="100%">
      <li class="no-padding">
        <ul class="collapsible collapsible-accordion">
-         <li class="bold"><a href="/" class="collapsible-header  waves-effect waves-blue">Home</a>
+         <li class="bold"><a href="/" class="collapsible-header  waves-effect waves-blue">Refresh Game</a>
          </li>
-         <li class="bold"><a class="collapsible-header  waves-effect waves-cyan">Create Group</a>
+         <li class="bold"><a  href="http://www.czechgames.com/en/codenames/" class="collapsible-header  waves-effect waves-cyan">Codenames website</a>
            <div class="collapsible-body">
              <ul>
-               <li><a>Create Codenames Group</a></li>
+               <br>
+               <li>Spymaster input your clues here!</a></li>
              </ul>
            </div>
          </li>
@@ -45,16 +46,13 @@
 
                <div class="well">
                  <ul id="past-hints">
-                   <% @hints.each() do |hint| %>
-                     <li> <h5>Your Hint is:</h5> <h5><em><b><%= hint.name %></h5></li>
-                   <% end %>
                  </ul>
 
                </div>
            </div>
        </ul>
        <form class="form-group">
-         <button class = "btn" id="clear-database">Clear Database</button>
+         <button class = "btn" id="clear-database">Clear Hints</button>
 
          <a class="twitter-timeline"  href="https://twitter.com/hashtag/codenames" data-widget-id="864186917717295104">#codenames Tweets</a>
        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -64,14 +62,12 @@
       <a href="https://twitter.com/intent/tweet?button_hashtag=codenames" class="twitter-hashtag-button" data-show-count="false">Tweet #LoveTwitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></h7>
        </form>
      </div>
-       <br>
-       <br>
   </div>
   <nav>
   <div class="">
     <a href="#" class="brand-logo">Codenames</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="https://github.com/mreichman">Max Github</a></li>
+      <li><a href="https://github.com/mreichman">Max's Github</a></li>
       <li><a href="https://github.com/ziggity">Zach's Github</a></li>
       <li><a href="https://github.com/pkarella">Peter's Github</a></li>
     </ul>
@@ -89,7 +85,5 @@
         <br>
         <br>
         <br>
-
-
   </body>
 </html>
