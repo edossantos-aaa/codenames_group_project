@@ -1,7 +1,16 @@
+
+
 .jumbotron {
-  background-color: #FFA500;
-  font-size: 48pt;
-  text-align: center;
+    margin-bottom: 0px;
+    background-image: url(http://i65.tinypic.com/jz9rva.png);
+    background-position: 0% 125%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-bottom: 25px;
+    padding-top: 100px;
+    background-position: 0% 25%;
+    text-shadow: black 0.3em 0.3em 0.3em;
 }
 
 .col-md-2 {
@@ -29,6 +38,7 @@
   z-index: 0;
   border: solid black 1px;
   position: absolute;
+  left: -10px;
 }
 
 .redfemale {
