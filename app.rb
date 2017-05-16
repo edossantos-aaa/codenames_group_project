@@ -22,32 +22,8 @@ post('/hint1') do
   Hint1.create({:name => hint})
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-post '/clear_all' do
-  clear_all()
-  erb :index
-end
-
-def clear_all
+delete '/clear_all' do
   Player1.delete_all()
   Player2.delete_all()
-  Game.delete_all()
+  Hint1.delete_all()
 end

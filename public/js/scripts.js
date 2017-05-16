@@ -58,8 +58,15 @@ $(document).ready(function() {
     httpRequest.open("POST", "/hint1", true);
     httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     httpRequest.send("hint=" + hint);
-    $("#past-hints").append("<li>" + hint + "</li>");
+    $("#past-hints").prepend("<li>" + hint + "</li>");
     alert(hint);
     event.preventDefault()
+  });
+  $("#clear-database").click(function(event) {
+    httpRequest = new XMLHttpRequest();
+    httpRequest.open("DELETE", "/clear_all", true);
+    httpRequest.send();
+    $("#past-hints").empty();
+    event.preventDefault();
   });
 });

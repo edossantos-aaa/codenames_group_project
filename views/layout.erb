@@ -40,31 +40,32 @@
                <form class="form-group" id="hint-form">
                  <label for="Spymaster">Spymaster type hint here</label>
                  <input type="text" name="hint" id="hint">
-                 <button type="submit" name="button" id="submit-hint"></button>
+                 <button class = "btn" type="submit" name="button" id="submit-hint">Submit Hint</button>
                </form>
 
                <div class="well">
                  <ul id="past-hints">
                    <% @hints.each() do |hint| %>
-                     <li><%= hint.name %></li>
+                     <li> <h5>Your Hint is:</h5> <h5><em><b><%= hint.name %></h5></li>
                    <% end %>
                  </ul>
 
                </div>
            </div>
        </ul>
+       <form class="form-group">
+         <button class = "btn" id="clear-database">Clear Database</button>
 
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <a class="twitter-timeline"  href="https://twitter.com/hashtag/codenames" data-widget-id="864186917717295104">#codenames Tweets</a>
-     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    <br>
-    <h7> Tweet at the team over at Codenames!
+         <a class="twitter-timeline"  href="https://twitter.com/hashtag/codenames" data-widget-id="864186917717295104">#codenames Tweets</a>
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       <br>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=codenames" class="twitter-hashtag-button" data-show-count="false">Tweet #LoveTwitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></h7>
+      <h7> Tweet at the team over at Codenames!
+        <br>
+      <a href="https://twitter.com/intent/tweet?button_hashtag=codenames" class="twitter-hashtag-button" data-show-count="false">Tweet #LoveTwitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></h7>
+       </form>
+     </div>
+       <br>
+       <br>
   </div>
   <nav>
   <div class="">
