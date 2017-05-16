@@ -17,7 +17,14 @@ $(document).ready(function() {
     height: 500,
     width: 500
   });
-  $("#reveal-key").click(function(event) {
+  $("#reveal_code").click(function(event) {
+    $("#secret-key-dialog").dialog("open");
+    $("#reveal_code").hide();
+    $("#reveal_code").show();
+    event.preventDefault();
+  });
+
+  $("#reveal-code").click(function(event) {
     $("#secret-key-dialog").dialog("open");
     event.preventDefault();
   });
