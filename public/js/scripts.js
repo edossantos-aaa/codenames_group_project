@@ -1,9 +1,10 @@
- var images = ['spycode1.png', 'spycode2.png', 'spycode3.png', 'spycode4.png', 'spycode5.png', 'spycode6.png', 'spycode7.png', 'spycode8.png', 'spycode9.png', 'spycode10.png', 'spycode11.png', 'spycode12.png', 'spycode13.png', 'spycode14.png', 'spycode15.png', 'spycode16.png', 'spycode17.png', 'spycode18.png', 'spycode19.png', 'spycode20.png', 'spycode21.png', 'spycode22.png', 'spycode23.png', 'spycode24.png'];
+ var images = ['spycode1.png', 'spycode2.png', 'spycode3.png', 'spycode4.png', 'spycode5.png', 'spycode6.png', 'spycode7.png', 'spycode8.png', 'spycode9.png', 'spycode10.png', 'spycode11.png', 'spycode12.png', 'spycode13.png', 'spycode14.png', 'spycode15.png', 'spycode16.png'];
 
 $(document).ready(function() {
-  randomImage = Math.floor((Math.random() * 24)+1);
+  randomImage = Math.floor((Math.random() * 16)+1);
   console.log(randomImage)
-  $("#secret-key-dialog").append('<img src=/images/spycodes/' + images[randomImage] + '/>');
+  $("#secret-code-dealy").append('<img src=/images/spycodes/' + images[randomImage] + ' width=100% />');
+  $("#secret-code-dealy").hide();
   $(".red-male").draggable();
   $(".red-female").draggable();
   $(".blue-male").draggable();
@@ -12,21 +13,13 @@ $(document).ready(function() {
   $(".assassin-Male").draggable();
   $(".doubleagent-red").draggable();
   $(".doubleagent-blue").draggable();
-  $("#secret-key-dialog").dialog({
-    autoOpen: false,
-    height: 500,
-    width: 500
-  });
-  $("#reveal_code").click(function(event) {
-    $("#secret-key-dialog").dialog("open");
-    $("#reveal_code").hide();
-    $("#reveal_code").show();
-    event.preventDefault();
-  });
-
-  $("#reveal-code").click(function(event) {
-    $("#secret-key-dialog").dialog("open");
-    event.preventDefault();
+  $("#reveal_code").click(function() {
+    $(this).hide();
+    $("#secret-code-dealy").show()
+    $("#secret-code-dealy").click(function() {
+      $(this).hide();
+      $("#reveal_code").show();
+    })
   });
   $("span").mouseup(function(event) {
     redPosition1 = $("#red1").position().top

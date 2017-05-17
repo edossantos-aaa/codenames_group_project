@@ -13,6 +13,13 @@
     text-shadow: black 0.3em 0.3em 0.3em;
 }
 
+body{
+  background-image: url(http://i64.tinypic.com/2nspfs3.png);
+ background-repeat: no-repeat;
+ background-position: 0% 100%;
+ background-size: cover;
+}
+
 .col-md-2 {
   display: block;
   border: solid #deb887 1px;
@@ -25,6 +32,7 @@
   margin-bottom: 10px;
   z-index: -2;
   font-size: 2em;
+  box-shadow: 0px 2px;
 }
 
 #hiddenbox{
@@ -36,9 +44,10 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
   position: absolute;
   left: -10px;
+  box-shadow: 0px 2px;
+  border: solid white 1px;
 }
 
 .redfemale {
@@ -46,9 +55,10 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 150px;
+  box-shadow: 0px 2px;
 }
 
 .bluemale {
@@ -56,9 +66,10 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 300px;
+  box-shadow: 0px 2px;
 }
 
 .bluefemale {
@@ -66,9 +77,10 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 450px;
+  box-shadow: 0px 2px;
 }
 
 .bystanderMale {
@@ -76,9 +88,10 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 650px;
+  box-shadow: 0px 2px;
 }
 
 .assassin {
@@ -86,9 +99,10 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 850px;
+  box-shadow: 0px 2px;
 }
 
 .doubleagent_red {
@@ -96,19 +110,22 @@
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 950px;
+  box-shadow: 0px 2px;
 }
+
 
 .doubleagent_blue {
   border-radius: 3px;
   display: inline-block;
   cursor: pointer;
   z-index: 0;
-  border: solid black 1px;
+  border: solid white 1px;
   position: absolute;
   left: 1050px;
+  box-shadow: 0px 2px;
 }
 
 #reveal-key {
