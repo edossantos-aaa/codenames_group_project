@@ -55,7 +55,7 @@ $(document).ready(function() {
   $("#hint-form").submit(function(event) {
     hint = $("#hint").val();
     httpRequest = new XMLHttpRequest();
-    httpRequest.open("POST", "/hint1", true);
+    httpRequest.open("POST", "/hint", true);
     httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     httpRequest.send("hint=" + hint);
     $("#past-hints").prepend("<h6>" + 'Your hint is: ' + hint + '</h6>');

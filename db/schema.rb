@@ -10,62 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516212906) do
+ActiveRecord::Schema.define(version: 20170517184702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.integer "player1_id"
-    t.integer "player2_id"
-    t.integer "spymaster1_id"
-    t.integer "spymaster2_id"
-    t.integer "word_id"
-    t.integer "login_id"
+    t.boolean "finished"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "hint1s", force: :cascade do |t|
+  create_table "games_hints", force: :cascade do |t|
+    t.integer "hints_id"
+    t.integer "games_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "games_words", force: :cascade do |t|
+    t.integer "words_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "game_id"
+  end
+
+  create_table "hints", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "hint2s", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "logins", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "player1s", force: :cascade do |t|
-    t.boolean "in_game"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "player2s", force: :cascade do |t|
-    t.boolean "in_game"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spymaster1s", force: :cascade do |t|
-    t.boolean "in_game"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-  end
-
-  create_table "spymaster2s", force: :cascade do |t|
-    t.boolean "in_game"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
