@@ -25,3 +25,8 @@ post('/hint') do
   @game = current_game
   @game.hints.create({:name => hint})
 end
+
+patch('/game') do
+  @game = current_game
+  @game.update({:finished => true})
+end
