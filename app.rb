@@ -14,16 +14,23 @@ get('/') do
     @emptyarray.push(words[count])
     count+=1
   end
-  @hints = Hint.all()
   game = Game.create()
   current_game = game
   erb(:index)
 end
 
 post('/hint') do
-  hint = params.fetch("hint")
   @game = current_game
-  @game.hints.create({:name => hint})
+  hint = params.fetch("hint")
+  word_test = Hint.create({:name => hint})
+  word_checker = word_test.test_word()
+    binding.pry
+  if word_checker == hint
+    @game.hints.create({:name => hint})
+    print "worked"
+  else
+    print "try again, not a real word"
+  end
 end
 
 patch('/game') do
