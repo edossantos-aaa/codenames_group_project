@@ -21,16 +21,9 @@ end
 
 post('/hint') do
   @game = current_game
+  @game.hints.create({:name => hint})
   hint = params.fetch("hint")
-  word_test = Hint.create({:name => hint})
-  word_checker = word_test.test_word()
-    binding.pry
-  if word_checker == hint
-    @game.hints.create({:name => hint})
-    print "worked"
-  else
-    print "try again, not a real word"
-  end
+  new_word = Hint.create({:name => hint})
 end
 
 patch('/game') do

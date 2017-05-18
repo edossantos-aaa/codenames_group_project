@@ -71,4 +71,7 @@ $(document).ready(function() {
     alert(hint);
     event.preventDefault()
   });
+  $("#clear-hints").click(function() {
+    $("#past-hints").empty();
+  });
 });
