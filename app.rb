@@ -21,9 +21,8 @@ end
 
 post('/hint') do
   @game = current_game
-  @game.hints.create({:name => hint})
   hint = params.fetch("hint")
-  new_word = Hint.create({:name => hint})
+  @game.hints.create({:name => hint})
 end
 
 patch('/game') do
