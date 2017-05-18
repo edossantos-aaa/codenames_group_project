@@ -1,4 +1,23 @@
- var images = ['spycode1.png', 'spycode2.png', 'spycode3.png', 'spycode4.png', 'spycode5.png', 'spycode6.png', 'spycode7.png', 'spycode8.png', 'spycode9.png', 'spycode10.png', 'spycode11.png', 'spycode12.png', 'spycode13.png', 'spycode14.png', 'spycode15.png', 'spycode16.png'];
+var images = ['spycode1.png', 'spycode2.png', 'spycode3.png', 'spycode4.png', 'spycode5.png', 'spycode6.png', 'spycode7.png', 'spycode8.png', 'spycode9.png', 'spycode10.png', 'spycode11.png', 'spycode12.png', 'spycode13.png', 'spycode14.png', 'spycode15.png', 'spycode16.png'];
+
+function countdown(minutes) {
+  var seconds = 30;
+  var mins = minutes
+  function tick() {
+    var counter = document.getElementById("counter");
+    var current_minutes = mins-1
+    seconds--;
+    counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+    if( seconds > 0 ) {
+      setTimeout(tick, 1000);
+    } else {
+      if(mins > 1) {
+        countdown(mins-1);
+      }
+    }
+  }
+  tick();
+}
 
 $(document).ready(function() {
   randomImage = Math.floor((Math.random() * 16)+1);
@@ -73,5 +92,8 @@ $(document).ready(function() {
   });
   $("#clear-hints").click(function() {
     $("#past-hints").empty();
+  });
+  $("#time").click(function() {
+    countdown(2);
   });
 });
